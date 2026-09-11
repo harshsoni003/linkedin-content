@@ -1,31 +1,70 @@
-# Voice Profile
+# Voice Profile — Harsh Soni
 
-> Not built yet. Fill this in from 3-10 posts you've written, then paste this
-> whole block at the top of any drafting session.
+Built from a 6-question interview + harshsoni.work, September 2026.
+Paste the block below at the top of any drafting session.
 
 ```
-VOICE PROFILE: [name]
-Who I am: [what you do and who you write for]
+VOICE PROFILE: Harsh Soni
+Who I am: freelance full-stack AI engineer; I build automations, AI agents and
+MVPs with Claude Code, Lovable, n8n and Supabase. I write for founders and
+agencies who might hire me.
 
-Openings: [how your first lines behave, with a real quoted fragment]
-Rhythm: [the sentence-length pattern you actually use]
-Paragraphs: [how you break up text]
-Punctuation: [what your samples show, including em dashes or not]
-Words I use: [5-8 words pulled straight from your writing]
-Words I never use: [3-6 words that would ring false]
-Signature moves: [2-4 habits, each seen in at least two samples]
-Numbers: [exact, rounded, or rare]
-Humor: [type and dose, or "none"]
-Endings: [how your posts land]
-Never do: [2-3 things that would instantly break the voice]
+Openings: name the thing I built, first line, no run-up ("i build platform to
+  automate his crm")
+Rhythm: short clauses strung with commas, not full stops. One idea per line.
+Paragraphs: one or two lines each, white space between
+Punctuation: commas over periods; no em dashes anywhere in the samples;
+  no exclamation points
+Words I use: "build", "built", "ship", "automate", "agent", "0 -> 1", "etc"
+Words I never use: "journey", "happy to share", "excited to announce",
+  "leverage", "thrilled"
+Signature moves: lists the stack instead of describing it (React, Supabase,
+  n8n); says the problem before the apology ("i need 1 more day to fix
+  everything, sorry for this problem"); ends on the build, not on a lesson
+Numbers: rarely uses any. This is a gap, not a style - see below.
+Humor: wants dry and heavy. No evidence in the samples yet.
+Endings: stops when the point is done. No sign-off, no motivational line.
+Never do: corporate padding, "happy to share", hedging before bad news,
+  pretending a build was smooth when it wasn't
 
 Sounds exactly like me:
-1. "[verbatim line from your writing]"
-2. "[verbatim line]"
-3. "[verbatim line]"
+1. "hey [client], i faced an issue on that, i need 1 more day to fix
+   everything, sorry for this problem"
+2. "i build platform to automate his crm"
+3. "Building is what I do best."
 ```
 
-## Test it
+Built from interview only. Rerun voice-match after your first 5 real posts.
 
-Read each line and ask: could this describe half of LinkedIn?
-A good profile fails that question on every line.
+---
+
+## Two honest flags
+
+**1. Numbers.** You said you don't use them. That is recorded above as fact, not
+corrected. But it is the single fastest upgrade available to you. "Built a CRM
+automation" is a claim. "Built it in 4 days, cut their manual entry to zero" is
+evidence. Start tracking: days to build, what it replaced, how long the old way
+took.
+
+**2. Humor.** You picked "half my personality," but nothing in six answers was
+funny. That is not a criticism - it means the humor is real in person and hasn't
+reached your writing yet. Until a draft of yours actually makes someone laugh,
+treat the humor line as a target, not a description.
+
+## What is NOT in the profile
+
+Your interview answers had heavy typos ("pronlen", "protofolio", "soory").
+That is fast typing, not voice, so it is deliberately excluded. Your voice is
+the directness underneath: short, plain, no padding, straight at the problem.
+Publish clean. Stay blunt.
+
+## Your material
+
+11 shipped projects on harshsoni.work, every one a post:
+
+Voice Bolt · CopyWiz · Integration Hub · Vapi Dashboard · Lead Gen Dashboard ·
+Logistics Dashboard · DyotaAI · Circle Community · Crdible · AI Voice
+Receptionist · RE ALINE
+
+Note: CopyWiz and Crdible are both LinkedIn post generators. You built the tool
+you are now trying to use. That is a post on its own.
