@@ -13,7 +13,7 @@ Four statuses. Nothing skips a step.
 
 | # | Post (first line) | Ask | Status | Checked | Date |
 |---|---|---|---|---|---|
-| - | _nothing yet_ | - | - | - | - |
+| 1 | "I stopped opening Photoshop for YouTube thumbnails." | none | Drafted | no | - |
 
 ## Watch for
 

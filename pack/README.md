@@ -3,29 +3,35 @@
 The complete original download. Private copy.
 
 ```
-skills/          the 11 SKILL.md source folders  -> for Claude Code
-install-first/   3 ZIPs: voice-match, post-writer, voice-firewall
-all-skills/      all 11 ZIPs                      -> for the Claude app
-examples/        one worked example per skill
-START-HERE.md    the first-post walkthrough
-INSTALL.md       installation steps
-PACK-README.md   the original overview
+skills/       11 SKILL.md folders   -> Claude Code (readable on GitHub)
+all-skills/   11 ZIPs               -> Claude app upload
+examples/     one worked example per skill
+START-HERE.md the first-post walkthrough
+INSTALL.md    installation steps
 ```
+
+Same 11 skills in `skills/` and `all-skills/` — two formats for two places.
+Folders you can read in the browser. ZIPs the Claude app can swallow.
 
 ## Install
 
 **Claude app (web / desktop / phone)**
-Settings → Capabilities → turn on *Code execution and file creation*.
-Settings → Customize → Skills → **+** → Create skill → Upload a skill.
-Upload the ZIPs from `install-first/`. Leave them zipped.
+
+1. Settings → Capabilities → turn on *Code execution and file creation*
+2. Settings → Customize → Skills → **+** → Create skill → Upload a skill
+3. Upload from `all-skills/`, leave them zipped. Start with these three:
+   `voice-match.zip` · `post-writer.zip` · `voice-firewall.zip`
 
 **Claude Code**
+
 ```bash
 mkdir -p ~/.claude/skills
 cp -R pack/skills/* ~/.claude/skills/
 ```
 Restart Claude Code once.
 
----
+## License
 
-Not mine. Aryan Mahajan's paid pack — keep this repo private.
+From the original: *"Use the skills. Change them. Ship client work with them."*
+
+Aryan Mahajan's paid pack. **Keep this repo private.**
