@@ -10,7 +10,8 @@ Number each item so a draft can point back to where it came from.
 2.
 
 ## Opinions I'd defend in an argument
-3.
+3. Building is not the bottleneck. I can take an idea to a live product in days, and it makes no difference to whether anyone finds it. Marketing and SEO are the actual job, they are slow, and I am not good at them yet. The builders I read are not better engineers than me, they just never stop putting the thing in front of people.
+   → drafted as drafts/marketing-seo-gap.md
 
 ## Stories and client moments
 4.

@@ -14,6 +14,7 @@ Four statuses. Nothing skips a step.
 | # | Post (first line) | Ask | Status | Checked | Date |
 |---|---|---|---|---|---|
 | 1 | "I stopped opening Photoshop for YouTube thumbnails." | none | Drafted | no | - |
+| 2 | "I shipped [N] projects last year." | tips in comments | Drafted | no | - |
 
 ## Watch for
 
