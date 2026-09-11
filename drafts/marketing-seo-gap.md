@@ -1,10 +1,10 @@
 # The marketing gap
 
-**Goal:** start conversations — he wants real tips back, not applause
-**From:** raw-material item #3
+**Goal:** start conversations — real tips back, not applause
+**From:** raw-material item #5
 **Hook family:** first person
 **Voice:** Harsh Soni profile applied
-**Status:** Drafted — product names not confirmed
+**Status:** Ready — no blanks left, needs one read out loud
 
 ---
 
@@ -16,8 +16,8 @@ Not one of them failed because of the code.
 
 Here's what actually killed them.
 
-[YOUR PRODUCTS: name them, the way you'd type them]. Every one shipped, every
-one working.
+Voicebolt, Maciframe, Motion Kleoo, Crdible, and a few more. Every one of them
+shipped and worked.
 
 I can take an idea to a live product in days. Auth, database, payments, agents,
 deploy. That part I know cold.
@@ -42,86 +42,80 @@ it?
 
 ## Fill in before posting
 
-- [ ] **The product names.** This is the only blank left and it is the line that
-      makes the post real. Naming four dead products is the whole reason a
-      stranger believes the rest of it.
+Nothing. Every fact in this post came from you.
 
-      What came through when you said them: "mickey frame", "voice board",
-      "grade twelve", and something doing AI motion video. I could not decode
-      those into real names, so I did not guess. "voice board" may be Voice
-      Bolt from your site. Write the four real names yourself.
+Two things to eyeball, not fill:
 
-      Do not cut this line and keep the post. Without the names the opening is
-      a feeling, with them it is evidence.
-
-- [ ] Optional: if one of them got further than the others, say how far. "One
-      got [N] signups" lands harder than four equal failures.
+- [ ] **Spelling of your own products.** Written as you typed them: Voicebolt,
+      Maciframe, Motion Kleoo, Crdible. Your site has "Voice Bolt" as two words
+      and "Crdible". Match whatever the live product says. A misspelled product
+      name under your own post is the one typo people notice.
+- [ ] **Optional upgrade, only if the number is real.** If any of them got
+      users, say how few. "Crdible got 6 signups" beats "failed" by a mile,
+      because a stranger can feel 6. Do not add it unless you know the figure.
 
 ## Alternate openings
 
-**A — bare number**
-> [N] SaaS platforms last year.
-> [N2] users between all of them.
+**A — bare list**
+> Voicebolt. Maciframe. Motion Kleoo. Crdible.
+> All live, none of them took off.
 
-*Shape: bare number. The strongest version of this post if that second figure
-exists and is brutal. A zero or a single digit does more work than any sentence
-here.*
+*Shape: bare list. The names carry the whole hook and the periods slow a scroll
+down. Prefer it if anyone in your network would recognize one of them.*
 
 **B — corrective**
 > Shipping fast is not the advantage everyone tells you it is.
-> I built four products last year and shipping speed saved none of them.
+> I built four products last year, shipped every one, and speed saved none of
+> them.
 
 *Shape: corrective. Widest reach, most arguing in the comments, least about you.
 Wins attention, builds less trust.*
 
 **C — unfinished story**
-> I deployed the fourth one on a Thursday night and opened analytics on Sunday.
-> [YOUR NUMBER: visits] visits, most of them mine.
+> Voicebolt went live. Then Maciframe. Then Motion Kleoo.
+> Same ending every time, and I kept blaming the wrong thing.
 
-*Shape: unfinished story. Most human of the four and most likely to get real
-replies, but it needs one specific launch and its real first-week traffic. Do
-not write it from memory of how it felt.*
+*Shape: unfinished story. Most human of the three and most likely to pull real
+replies, because "the wrong thing" is a question the reader has to open the post
+to close.*
 
 ## The call
 
-Run the main one. Four named dead products is the strongest asset you have here
-and no other opening uses them. It is your own work with your name on it, which
-is what your profile does naturally, and the closing question is answerable in
-one line, which is what gets you tips instead of "great post".
+Run the main one. It states the failure flat in line one, which is the move your
+voice profile is built on, and it holds the product names back until after the
+cut so they land as proof instead of as a list.
 
-Switch to A only if the user count across all four is genuinely embarrassing.
-That number would beat everything.
+C is the one to try second if the main one underperforms. Same facts, slower
+reveal, and it makes the reader guess what you were blaming.
 
 ## Voice notes
 
 Applied from the profile:
 - Opens on the build, no run-up
-- Stack listed, not described ("auth, database, payments, agents, deploy")
+- Products listed the way you list a stack, commas not bullets
 - Failure stated flat, no cushion ("I'm bad at that right now") — same move as
   "i need 1 more day to fix everything, sorry for this problem"
-- Comma-strung clauses in the builders line, one idea per line elsewhere
 - No em dashes, no exclamation points, no "journey"
 - Long explaining sentence, then a short landing line
 
-The builders line was rewritten. Old version said they "never stop putting it in
-front of people", which is a description of them. New version says what it costs
-you, in your own vocabulary: they ship distribution, you ship features. Same
-verb, so the comparison lands without you having to explain it.
+The builders line says what the gap costs you rather than describing them. Same
+verb on both sides, they ship distribution, you ship features, so the comparison
+lands without explaining itself.
 
-One deliberate break from the profile: your profile says you end on the build,
-not on a lesson. This post ends on a question. That is the goal overriding the
-habit — you asked for tips, and a post ending on the build gets applause instead
-of answers. The line before the question still lands on the build.
+One deliberate break from the profile: you normally end on the build, not a
+lesson. This ends on a question, because you asked for tips and a post that ends
+on the build gets applause instead of answers. The line before the question
+still lands on the build.
 
 ## Check before it ships
 
-- [x] Every number came from me — there are none, nothing invented
+- [x] Every fact came from me, nothing invented, no numbers anywhere
 - [x] Opening doesn't give away the ending — line 2 says what didn't kill them,
       never what did
 - [x] No "It's not X, it's Y"
 - [x] No two consecutive lines on the same skeleton
-- [x] No three-item list used as filler — the stack list is your own habit
+- [x] Product list is your own habit, not a filler triad
 - [x] Sentence lengths vary
 - [x] Ending doesn't restate the opening
-- [ ] Product names filled in
+- [ ] Product spelling matched to the live products
 - [ ] Read out loud once
