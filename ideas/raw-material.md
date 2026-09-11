@@ -17,7 +17,9 @@ Number each item so a draft can point back to where it came from.
 4.
 
 ## Failures and things that cost me
-5.
+5. Tried to build my own SaaS platform several times last year. Every one of them failed. Not one failed on the build — they all shipped and worked. Nobody found them.
+   Names to confirm: heard as "mickey frame", "voice board" (Voice Bolt?), "grade twelve", and one doing AI motion video.
+   → drafted as drafts/marketing-seo-gap.md
 
 ---
 
