@@ -43,19 +43,17 @@ it?
 
 ## The image
 
-`assets/motion-kleoo-proof.png` — 1080x1350, 4:5.
-
-Built from real GitHub push dates, nothing mocked up. Per visual-brief:
+`assets/hook-card.png` — 1080x1350, 4:5.
 
 | | |
 |---|---|
-| **Proves** | He didn't under-build. One product, 19 repos, 25 days, still not found. |
-| **Main proof** | 19 repos in 25 days |
-| **Layout** | Single stat block over a real listing. Rejected: screenshot of the GitHub page (private repos would be in frame). |
-| **Ask** | None. No comment word in the post, so the image carries proof only. |
+| **Carries** | The hook plus the one line that turns it. These are lines 1 and 2 of the post, the pair that sits above the "see more" cut, so the image shows exactly what a stranger sees before tapping. |
+| **Layout** | Type only. "failed" is the single word in the accent colour, and nothing else on the card competes with it. |
+| **Rejected** | A data card built from the GitHub repo history (19 motion-kleoo repos in 25 days). Real and checkable, but it put the repositories on display, which Harsh did not want. |
+| **Ask** | None. The post has no comment word, so the image carries the hook only. |
+| **On-image text** | "Every SaaS platform I tried to build last year failed." / "Not one of them failed because of the code." / "harsh soni" / "full-stack ai engineer" |
 
-Source data pulled 2026-09-12: 19 `motion-kleoo*` repos, first push 2026-06-01,
-last 2026-06-25, six of them on 2026-06-01 alone.
+Crop-safe: the headline sits centred, so it survives a 1:1 feed crop.
 
 ---
 
