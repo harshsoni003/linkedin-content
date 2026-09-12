@@ -4,7 +4,8 @@
 **From:** raw-material item #5
 **Hook family:** first person
 **Voice:** Harsh Soni profile applied
-**Status:** Ready — no blanks left, needs one read out loud
+**Status:** Published
+**Posted:** [DATE: fill when it goes live]
 
 ---
 
@@ -37,6 +38,27 @@ That's the gap I'm closing this year.
 
 If you've taken a product from no traffic to real traffic, what actually moved
 it?
+
+---
+
+## Results
+
+Record these a week after it ships. Blank until then — an invented number here
+is worse than no number.
+
+| Metric | Value |
+|---|---|
+| Posted at | [DATE + TIME] |
+| Impressions | [NUMBER] |
+| Reactions | [NUMBER] |
+| Comments | [NUMBER] |
+| Replies with an actual tip | [NUMBER] |
+| Profile views after | [NUMBER] |
+| Leads or DMs | [NUMBER] |
+
+The one that matters: **replies with an actual tip.** The goal of this post was
+to start conversations, not to collect reactions. A post with 40 reactions and
+no tips failed at its own job.
 
 ---
 

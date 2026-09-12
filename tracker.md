@@ -14,7 +14,7 @@ Four statuses. Nothing skips a step.
 | # | Post (first line) | Ask | Status | Checked | Date |
 |---|---|---|---|---|---|
 | 1 | "I stopped opening Photoshop for YouTube thumbnails." | none | Drafted | no | - |
-| 2 | "Every SaaS platform I tried to build last year failed." | tips in comments | Ready | yes | - |
+| 2 | "Every SaaS platform I tried to build last year failed." | tips in comments | Dated | yes | 2026-09-12 19:00 IST |
 
 ## Watch for
 
