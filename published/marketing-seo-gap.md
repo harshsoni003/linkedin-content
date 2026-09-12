@@ -41,6 +41,24 @@ it?
 
 ---
 
+## The image
+
+`assets/motion-kleoo-proof.png` — 1080x1350, 4:5.
+
+Built from real GitHub push dates, nothing mocked up. Per visual-brief:
+
+| | |
+|---|---|
+| **Proves** | He didn't under-build. One product, 19 repos, 25 days, still not found. |
+| **Main proof** | 19 repos in 25 days |
+| **Layout** | Single stat block over a real listing. Rejected: screenshot of the GitHub page (private repos would be in frame). |
+| **Ask** | None. No comment word in the post, so the image carries proof only. |
+
+Source data pulled 2026-09-12: 19 `motion-kleoo*` repos, first push 2026-06-01,
+last 2026-06-25, six of them on 2026-06-01 alone.
+
+---
+
 ## Results
 
 Record these a week after it ships. Blank until then — an invented number here
