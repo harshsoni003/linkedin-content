@@ -1,6 +1,6 @@
-# LinkedIn Content
+# LinkedIn + X Content
 
-My LinkedIn writing workspace. Voice profile, drafts, published posts, and the reference material I write against.
+My LinkedIn and Twitter / X writing workspace. Voice profile, drafts, published posts, and the reference material I write against.
 
 ## Layout
 
@@ -14,6 +14,8 @@ published/            posts that shipped, with their results
 
 skills/               the 11-skill system, what each one does
 reference/            post format, hook families, AI tells
+
+twitter/              X posts: @AdityaShips style guide, his top posts, my drafts
 ```
 
 ## The loop
@@ -26,6 +28,7 @@ reference/            post format, hook families, AI tells
 
 ## Reference
 
+- **[twitter/](twitter/README.md)** — X writing, style guide built from @AdityaShips' posts
 - **[skills/](skills/README.md)** — the 11 skills and when to use each
 - **[reference/post-format.md](reference/post-format.md)** — how a post is built
 - **[reference/hook-families.md](reference/hook-families.md)** — 7 ways to open

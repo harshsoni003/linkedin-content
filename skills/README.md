@@ -1,4 +1,4 @@
-# The 11 Skills
+# The 12 Skills
 
 What each one does, what to feed it, what comes back.
 
@@ -33,6 +33,16 @@ A moment beats a topic:
 - **Get back:** a score /10, every robot line rewritten, PASS or FAIL, and the clean version.
 
 See `../reference/ai-tells.md` for what it hunts.
+
+---
+
+### humanizer
+**Run on any draft that sounds like AI wrote it.** Type `/humanizer` and paste the post, or give it a file path.
+
+- **Lives in:** [`.claude/skills/humanizer/SKILL.md`](../.claude/skills/humanizer/SKILL.md), inside this repo
+- **Get back:** a score before → after, every AI tell it found, the clean version, and anything to check before posting
+- **Knows the channel:** keeps slang, emoji and short lines on X; follows `voice-profile.md` on LinkedIn
+- **Key rule:** never adds numbers. Missing ones come back as `[NUMBER: what goes here]`
 
 ---
 
