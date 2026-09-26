@@ -107,6 +107,29 @@ Avoided: "It's not the storage, it's the egress." That is the single most
 recognizable AI construction in `reference/ai-tells.md`. Written instead as
 "the storage size had nothing to do with it", then explained.
 
+## The images
+
+Ten options in `assets/r2-cards/`, 1080x1350, 4:5. Rebuild them by opening
+`_source.html` and screenshotting each card, or regenerate from that file.
+
+| # | Card | Use it for |
+|---|---|---|
+| 01 | Need storage? Use Cloudflare R2 | The recommendation, matches the hook word for word. **Best single pick.** |
+| 02 | 10 GB / 5 GB / $0 | The three numbers as tiles |
+| 03 | My upload failed at 50 MB | Opens on the wall instead of the answer |
+| 04 | Storage is cheap, downloads cost money | The thesis alone. Most reshareable. |
+| 05 | Full comparison, seven providers | The one people screenshot and save |
+| 06 | Out straight away / that left three | Mirrors the post's structure |
+| 07 | R2 against B2 | Identical until the download line |
+| 08 | Free storage by size | Oracle wins the bar and still loses |
+| 09 | Pick on download cost, not free space | The rule, applied to the reader's stack |
+| 10 | Oracle gives the most space, I still picked R2 | Quote card, good as slide 2 |
+
+Carousel order if posting several: 01, 03, 05, 07, 04.
+
+Design: same ground, accent and type as `published/assets/hook-card.png`, so
+every image Harsh posts reads as one system.
+
 ## Why this format
 
 The earlier version listed six providers in one flat block. Nobody reads a wall

@@ -1,0 +1,228 @@
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --ground:#151A19; --surface:#1B211E; --ink:#EDF1EE; --muted:#9AAAA4;
+    --dim:#6E807A; --rule:#2C332F; --accent:#7FB89F; --accent-dim:#22302B;
+    --display:"Fraunces",Georgia,serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0b0e0d;font-family:var(--mono)}
+  .card{
+    width:1080px;height:1350px;background:var(--ground);color:var(--ink);
+    padding:82px 76px 66px;display:flex;flex-direction:column;overflow:hidden;
+    margin-bottom:40px;
+  }
+  .eyebrow{font-size:19px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--dim)}
+  .mid{flex:1;display:flex;flex-direction:column;justify-content:center;gap:34px}
+  h1{font-family:var(--display);font-weight:600;letter-spacing:-.025em;line-height:1.05;text-wrap:balance}
+  .xl{font-size:100px}  .lg{font-size:80px}  .md{font-size:62px}
+  em{font-style:normal;color:var(--accent)}
+  .sub{font-size:31px;line-height:1.45;color:var(--muted);max-width:26ch}
+  foot,.foot{display:flex;justify-content:space-between;align-items:flex-end;
+    font-size:18px;letter-spacing:.05em;color:var(--dim);
+    border-top:1px solid var(--rule);padding-top:24px}
+  .tick{width:64px;height:4px;background:var(--accent);border-radius:2px}
+
+  /* stat tiles */
+  .tiles{display:grid;grid-template-columns:1fr;gap:20px}
+  .tile{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    padding:30px 32px;display:flex;align-items:baseline;justify-content:space-between;gap:20px}
+  .tile .n{font-family:var(--display);font-size:66px;font-weight:600;color:var(--accent);
+    font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .tile .l{font-size:25px;color:var(--muted);text-align:right;max-width:13ch;line-height:1.35}
+
+  /* table */
+  table{width:100%;border-collapse:collapse;font-size:24px}
+  th{font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);
+    text-align:left;padding:0 14px 16px 0;font-weight:500}
+  th:last-child,td:last-child{text-align:right;padding-right:0}
+  td{padding:17px 14px 17px 0;border-top:1px solid var(--rule);color:var(--muted);
+    font-variant-numeric:tabular-nums}
+  td.name{color:var(--ink)}
+  tr.win td{color:var(--accent)} tr.win td.name{color:var(--accent);font-weight:600}
+  tr.out td.name{color:var(--muted)}
+
+  /* groups */
+  .grouplabel{font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .rows{display:flex;flex-direction:column;gap:13px}
+  .row{display:flex;justify-content:space-between;gap:24px;font-size:25px;color:var(--muted)}
+  .row b{font-weight:400;color:var(--ink)}
+  .row.win{color:var(--accent)} .row.win b{color:var(--accent);font-weight:600}
+  .strike b{text-decoration:line-through;text-decoration-color:var(--dim);color:var(--muted)}
+
+  /* versus */
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .col{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:32px 30px;
+    display:flex;flex-direction:column;gap:18px}
+  .col.win{border-color:var(--accent)}
+  .col h3{font-family:var(--display);font-size:38px;font-weight:600;letter-spacing:-.02em}
+  .col.win h3{color:var(--accent)}
+  .col ul{list-style:none;display:flex;flex-direction:column;gap:13px;font-size:23px;color:var(--muted);line-height:1.35}
+  .col .bad{color:var(--dim)}
+
+  /* bar chart */
+  .chart{display:flex;flex-direction:column;gap:22px}
+  .bar{display:grid;grid-template-columns:230px 1fr 100px;align-items:center;gap:20px;font-size:24px}
+  .bar .lab{color:var(--ink)}
+  .bar .track{height:34px}
+  .bar .fill{height:34px;background:var(--dim);border-radius:0 5px 5px 0}
+  .bar.win .fill{background:var(--accent)}
+  .bar.win .lab,.bar.win .val{color:var(--accent);font-weight:600}
+  .bar .val{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+  .axisnote{font-size:18px;color:var(--dim);margin-top:6px}
+</style>
+
+<!-- 1 RECOMMENDATION -->
+<div class="card" id="c1">
+  <div class="tick"></div>
+  <div class="mid">
+    <h1 class="xl">Need storage for your product?<br><em>Use Cloudflare R2.</em></h1>
+    <p class="sub">10 GB free, 5 GB per file, downloads free.</p>
+  </div>
+  <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
+</div>
+
+<!-- 2 THREE NUMBERS -->
+<div class="card" id="c2">
+  <div class="eyebrow">cloudflare r2, free tier</div>
+  <div class="mid">
+    <div class="tiles">
+      <div class="tile"><span class="n">10 GB</span><span class="l">free storage</span></div>
+      <div class="tile"><span class="n">5 GB</span><span class="l">max per file</span></div>
+      <div class="tile"><span class="n">$0</span><span class="l">to serve files out</span></div>
+    </div>
+    <p class="sub">The third one is the reason to pick it.</p>
+  </div>
+  <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
+</div>
+
+<!-- 3 THE WALL -->
+<div class="card" id="c3">
+  <div class="eyebrow">where this started</div>
+  <div class="mid">
+    <h1 class="xl">My upload failed at <em>50 MB.</em></h1>
+    <p class="sub">The video was 118. Supabase caps a single file at 50, whatever plan you are on.</p>
+  </div>
+  <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
+</div>
+
+<!-- 4 THESIS -->
+<div class="card" id="c4">
+  <div class="tick"></div>
+  <div class="mid">
+    <h1 class="lg">Storage is cheap.<br><em>Downloads are what cost money.</em></h1>
+    <p class="sub">Every free tier advertises the first number. The bill comes from the second.</p>
+  </div>
+  <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
+</div>
+
+<!-- 5 FULL TABLE -->
+<div class="card" id="c5">
+  <div class="eyebrow">free object storage, compared</div>
+  <div class="mid">
+    <table>
+      <tr><th>Provider</th><th>Free</th><th>Per file</th><th>Downloads</th></tr>
+      <tr class="win"><td class="name">Cloudflare R2</td><td>10 GB</td><td>5 GB</td><td>free</td></tr>
+      <tr><td class="name">Backblaze B2</td><td>10 GB</td><td>5 GB</td><td>30 GB/mo</td></tr>
+      <tr><td class="name">Oracle Cloud</td><td>20 GB</td><td>large</td><td>paid</td></tr>
+      <tr><td class="name">Google Cloud</td><td>5 GB</td><td>large</td><td>US only</td></tr>
+      <tr class="out"><td class="name">AWS S3 / Azure</td><td>5 GB</td><td>large</td><td>trial only</td></tr>
+      <tr class="out"><td class="name">Cloudinary</td><td>25 GB</td><td>100 MB</td><td>free</td></tr>
+      <tr class="out"><td class="name">Supabase</td><td>1 GB</td><td>50 MB</td><td>free</td></tr>
+    </table>
+    <p class="sub">The difference is in the last column.</p>
+  </div>
+  <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
+</div>
+
+<!-- 6 ELIMINATION -->
+<div class="card" id="c6">
+  <div class="eyebrow">how the list shrank</div>
+  <div class="mid">
+    <div>
+      <div class="grouplabel">out straight away</div>
+      <div class="rows">
+        <div class="row strike"><b>Supabase</b><span>50 MB per file</span></div>
+        <div class="row strike"><b>Cloudinary</b><span>100 MB per file</span></div>
+        <div class="row strike"><b>AWS and Azure</b><span>trial only</span></div>
+        <div class="row strike"><b>Google Cloud</b><span>5 GB, US only</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="grouplabel">that left three</div>
+      <div class="rows">
+        <div class="row"><b>Oracle</b><span>20 GB, harder setup</span></div>
+        <div class="row"><b>Backblaze B2</b><span>10 GB, no card</span></div>
+        <div class="row win"><b>Cloudflare R2</b><span>10 GB, downloads free</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
+</div>
+
+<!-- 7 R2 vs B2 -->
+<div class="card" id="c7">
+  <div class="eyebrow">the actual race</div>
+  <div class="mid">
+    <div class="vs">
+      <div class="col win">
+        <h3>Cloudflare R2</h3>
+        <ul>
+          <li>10 GB free</li>
+          <li>5 GB per file</li>
+          <li>downloads free, no cap</li>
+          <li class="bad">card required</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Backblaze B2</h3>
+        <ul>
+          <li>10 GB free</li>
+          <li>5 GB per file</li>
+          <li class="bad">downloads free to 30 GB/mo</li>
+          <li>no card required</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sub">Identical until the download line. That line is the decision.</p>
+  </div>
+  <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
+</div>
+
+<!-- 8 BAR CHART -->
+<div class="card" id="c8">
+  <div class="eyebrow">free storage, providers that accept a 118 MB file</div>
+  <div class="mid">
+    <div class="chart">
+      <div class="bar"><span class="lab">Oracle Cloud</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="val">20 GB</span></div>
+      <div class="bar win"><span class="lab">Cloudflare R2</span><span class="track"><span class="fill" style="width:50%"></span></span><span class="val">10 GB</span></div>
+      <div class="bar"><span class="lab">Backblaze B2</span><span class="track"><span class="fill" style="width:50%"></span></span><span class="val">10 GB</span></div>
+      <div class="bar"><span class="lab">Google Cloud</span><span class="track"><span class="fill" style="width:25%"></span></span><span class="val">5 GB</span></div>
+      <div class="bar"><span class="lab">AWS / Azure</span><span class="track"><span class="fill" style="width:25%"></span></span><span class="val">5 GB</span></div>
+    </div>
+    <p class="sub">Oracle gives the most space. I still picked R2.</p>
+  </div>
+  <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
+</div>
+
+<!-- 9 DECISION RULE -->
+<div class="card" id="c9">
+  <div class="eyebrow">the rule</div>
+  <div class="mid">
+    <h1 class="md">If your product serves files to users, pick on <em>download cost</em>, not free space.</h1>
+    <p class="sub">Storage you pay once. Downloads you pay every time someone opens the file.</p>
+  </div>
+  <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
+</div>
+
+<!-- 10 QUOTE -->
+<div class="card" id="c10">
+  <div class="tick"></div>
+  <div class="mid">
+    <h1 class="lg">Oracle gives the most space.<br><em>I still picked R2.</em></h1>
+  </div>
+  <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
+</div>
