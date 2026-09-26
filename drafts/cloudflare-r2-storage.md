@@ -17,25 +17,30 @@ If you are building a product and need extra storage, go with Cloudflare R2.
 
 The last one is why.
 
-I needed to store 118 MB videos. Supabase stops at 50 MB per file, so I went
-looking.
+My problem: 118 MB videos. Supabase stops at 50 MB per file.
 
-What the free tiers give you:
+So I checked every free tier.
 
-Cloudflare R2, 10 GB, 5 GB per file, free downloads
-Backblaze B2, 10 GB, 5 GB per file, free downloads up to 30 GB a month
-Oracle, 20 GB, but harder to set up
-Google Cloud, 5 GB, US only
-AWS and Azure, 5 GB, trial only
-Cloudinary, 100 MB per file, too small for my videos
+Out straight away:
+
+Supabase, 50 MB per file
+Cloudinary, 100 MB per file
+AWS and Azure, trial only, not free forever
+Google Cloud, 5 GB and US regions only
+
+That left three:
+
+Oracle, 20 GB free, harder to set up, card needed
+Backblaze B2, 10 GB free, 5 GB per file, no card
+Cloudflare R2, 10 GB free, 5 GB per file, card needed
 
 Oracle gives the most space. I still picked R2.
 
-Storage is cheap. Downloads are what cost money. R2 does not charge for them.
-That is the whole reason.
+Storage is cheap. Downloads are what cost money.
 
-B2 is very close and does not even need a card. But its free downloads stop at
-30 GB a month.
+R2 does not charge for them. B2 stops being free after 30 GB a month.
+
+That one line is the whole decision.
 
 Check the pricing pages before you sign up. These change.
 
@@ -102,27 +107,54 @@ Avoided: "It's not the storage, it's the egress." That is the single most
 recognizable AI construction in `reference/ai-tells.md`. Written instead as
 "the storage size had nothing to do with it", then explained.
 
+## Why this format
+
+The earlier version listed six providers in one flat block. Nobody reads a wall
+on LinkedIn, and worse, it gave equal weight to options that were never in the
+running.
+
+This version sorts them the way the decision actually went:
+
+**Two labelled groups instead of one list.** "Out straight away" and "That left
+three". The reader sees the shortlist shrink, which is the shape of a real
+decision and takes no effort to follow.
+
+**The eliminated ones carry their reason inline.** "Cloudinary, 100 MB per
+file" says why it lost without a sentence explaining it.
+
+**The three finalists are formatted identically**, so the differences between
+them are the only thing that moves. R2 and B2 line up almost exactly, which
+makes "downloads free" the visible variable.
+
+**One idea per line in the closing.** "Storage is cheap. Downloads are what
+cost money." sits alone, with white space either side, because it is the point
+of the post.
+
+**No markdown.** LinkedIn's composer strips bold, bullets and tables. Everything
+here is plain text and line breaks, so it pastes exactly as written.
+
+15 blank lines across 159 words. On LinkedIn white space is pacing, not
+decoration.
+
 ## Humanizer pass
 
 LinkedIn mode, voice-profile.md + reference/ai-tells.md. 9/10.
 
-Simplified from the earlier 217-word version to 168. Changes:
-
-- "egress" replaced with "downloads", which is the word a normal person uses
-- the hook now states the recommendation instead of holding it back
-- every sentence shortened, no clause runs longer than a breath
-
 Clean on: em dashes, hashtags, emoji, exclamation points, "It's not X, it's Y",
-forced triads, lesson endings, parallel repetition, vendor grammar. The provider
-list is a stack list, which the tells reference explicitly does not flag.
+forced triads, lesson endings, parallel repetition, vendor grammar, fake hedges.
+The provider lists are stack lists, which the tells reference explicitly does not
+flag as a rule of three.
+
+"egress" stays out. "Downloads are what cost money" is the same fact in the word
+a normal person uses.
 
 **One deliberate break from post-format.md.** The rule says don't answer the
 question before the "see more" cut. This hook gives the recommendation away on
-line 1 on purpose, because Harsh asked for it that way twice. It still holds a
-loop open: the post says *what* to use, and "The last one is why" keeps *why*
-behind the cut. That is what the reader opens it for.
+line 1 on purpose, because Harsh asked for it that way. It still holds a loop
+open: the post says *what* to use above the cut, and "The last one is why" keeps
+*why* below it.
 
-## Check before it ships## Check before it ships
+## Check before it ships## Check before it ships## Check before it ships
 
 - [x] Every number came from the material I was given
 - [x] Opening doesn't give away the ending — line 2 names a result and
