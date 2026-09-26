@@ -127,8 +127,29 @@ Ten options in `assets/r2-cards/`, 1080x1350, 4:5. Rebuild them by opening
 
 Carousel order if posting several: 01, 03, 05, 07, 04.
 
-Design: same ground, accent and type as `published/assets/hook-card.png`, so
-every image Harsh posts reads as one system.
+### Design system
+
+Four backgrounds, all drawn from one hue family, so a carousel has rhythm
+without looking like four unrelated graphics:
+
+| Ground | Hex | Cards |
+|---|---|---|
+| accent | `#7FB89F` | 01 |
+| paper | `#F2F4F1` | 03, 05, 07 |
+| sage | `#1E2B26` | 04, 08, 09 |
+| ink | `#151A19` | 02, 06, 10 |
+
+Every card carries a drawn stroke icon, 58px, no emoji, in keeping with the
+voice profile: cloud, layers, blocked file, download and coin, grid, funnel,
+scales, bars, checklist, quote mark. Each one names what the card is about
+rather than decorating it.
+
+Type stays Fraunces for display and IBM Plex Mono for data and labels, matching
+`published/assets/hook-card.png`.
+
+On the accent card the headline is already near-black, so emphasis comes from
+the base text receding to `--mut` and the emphasised words sitting at full
+`--fg`. Colouring `em` with the accent there would have made it invisible.
 
 ## Why this format
 

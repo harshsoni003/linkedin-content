@@ -3,81 +3,81 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
-  :root{
-    --ground:#151A19; --surface:#1B211E; --ink:#EDF1EE; --muted:#9AAAA4;
-    --dim:#6E807A; --rule:#2C332F; --accent:#7FB89F; --accent-dim:#22302B;
-    --display:"Fraunces",Georgia,serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
-  }
+  /* four grounds, one hue family */
+  .t-ink    {--bg:#151A19;--fg:#EDF1EE;--mut:#9AAAA4;--dim:#6E807A;--rule:#2C332F;--acc:#7FB89F;--panel:#1B211E;--track:#232B27}
+  .t-paper  {--bg:#F2F4F1;--fg:#141917;--mut:#5A6663;--dim:#8A9691;--rule:#D7DDD9;--acc:#2F6B5A;--panel:#FFFFFF;--track:#E2E7E3}
+  .t-sage   {--bg:#1E2B26;--fg:#E8F0EC;--mut:#9FB5AC;--dim:#7A908A;--rule:#31423B;--acc:#A8D8C2;--panel:#25332D;--track:#2B3A34}
+  .t-accent {--bg:#7FB89F;--fg:#111614;--mut:#2B4037;--dim:#3D544A;--rule:#6AA68C;--acc:#0E1512;--panel:#8CC2AA;--track:#6AA68C}
+
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:#0b0e0d;font-family:var(--mono)}
-  .card{
-    width:1080px;height:1350px;background:var(--ground);color:var(--ink);
-    padding:82px 76px 66px;display:flex;flex-direction:column;overflow:hidden;
-    margin-bottom:40px;
-  }
-  .eyebrow{font-size:19px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--dim)}
+  body{background:#07100c;font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+  .card{width:1080px;height:1350px;background:var(--bg);color:var(--fg);
+    padding:76px 74px 62px;display:flex;flex-direction:column;overflow:hidden;margin-bottom:36px}
+
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px}
+  .eyebrow{font-size:19px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);max-width:22ch;line-height:1.4}
+  .ico{flex:none;width:58px;height:58px;color:var(--acc)}
+  .ico svg{width:100%;height:100%;display:block;fill:none;stroke:currentColor;stroke-width:1.6;
+    stroke-linecap:round;stroke-linejoin:round}
+
   .mid{flex:1;display:flex;flex-direction:column;justify-content:center;gap:34px}
-  h1{font-family:var(--display);font-weight:600;letter-spacing:-.025em;line-height:1.05;text-wrap:balance}
-  .xl{font-size:100px}  .lg{font-size:80px}  .md{font-size:62px}
-  em{font-style:normal;color:var(--accent)}
-  .sub{font-size:31px;line-height:1.45;color:var(--muted);max-width:26ch}
-  foot,.foot{display:flex;justify-content:space-between;align-items:flex-end;
-    font-size:18px;letter-spacing:.05em;color:var(--dim);
-    border-top:1px solid var(--rule);padding-top:24px}
-  .tick{width:64px;height:4px;background:var(--accent);border-radius:2px}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;letter-spacing:-.025em;line-height:1.05;text-wrap:balance}
+  .xl{font-size:98px} .lg{font-size:78px} .md{font-size:60px}
+  em{font-style:normal;color:var(--acc)}
+  /* on the accent ground the headline is already near-black, so hierarchy
+     comes from weight of colour instead: base recedes, emphasis is darkest */
+  .t-accent h1{color:var(--mut)}
+  .t-accent em{color:var(--fg)}
+  .sub{font-size:30px;line-height:1.45;color:var(--mut);max-width:27ch}
+  .foot{display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;
+    letter-spacing:.05em;color:var(--dim);border-top:1px solid var(--rule);padding-top:22px}
 
-  /* stat tiles */
-  .tiles{display:grid;grid-template-columns:1fr;gap:20px}
-  .tile{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
-    padding:30px 32px;display:flex;align-items:baseline;justify-content:space-between;gap:20px}
-  .tile .n{font-family:var(--display);font-size:66px;font-weight:600;color:var(--accent);
-    font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-  .tile .l{font-size:25px;color:var(--muted);text-align:right;max-width:13ch;line-height:1.35}
+  .tiles{display:grid;gap:18px}
+  .tile{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:28px 32px;
+    display:flex;align-items:center;justify-content:space-between;gap:22px}
+  .tile .n{font-family:"Fraunces",Georgia,serif;font-size:64px;font-weight:600;color:var(--acc);
+    font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1}
+  .tile .l{font-size:24px;color:var(--mut);text-align:right;max-width:13ch;line-height:1.35}
 
-  /* table */
-  table{width:100%;border-collapse:collapse;font-size:24px}
-  th{font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);
-    text-align:left;padding:0 14px 16px 0;font-weight:500}
+  table{width:100%;border-collapse:collapse;font-size:23px}
+  th{font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-align:left;
+    padding:0 14px 15px 0;font-weight:500}
   th:last-child,td:last-child{text-align:right;padding-right:0}
-  td{padding:17px 14px 17px 0;border-top:1px solid var(--rule);color:var(--muted);
-    font-variant-numeric:tabular-nums}
-  td.name{color:var(--ink)}
-  tr.win td{color:var(--accent)} tr.win td.name{color:var(--accent);font-weight:600}
-  tr.out td.name{color:var(--muted)}
+  td{padding:16px 14px;border-top:1px solid var(--rule);color:var(--mut);font-variant-numeric:tabular-nums;padding-left:0}
+  td.name{color:var(--fg)}
+  tr.win td{color:var(--acc)} tr.win td.name{font-weight:600}
 
-  /* groups */
-  .grouplabel{font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
-  .rows{display:flex;flex-direction:column;gap:13px}
-  .row{display:flex;justify-content:space-between;gap:24px;font-size:25px;color:var(--muted)}
-  .row b{font-weight:400;color:var(--ink)}
-  .row.win{color:var(--accent)} .row.win b{color:var(--accent);font-weight:600}
-  .strike b{text-decoration:line-through;text-decoration-color:var(--dim);color:var(--muted)}
+  .grouplabel{font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:15px}
+  .rows{display:flex;flex-direction:column;gap:12px}
+  .row{display:flex;justify-content:space-between;gap:24px;font-size:24px;color:var(--mut);align-items:baseline}
+  .row b{font-weight:400;color:var(--fg)}
+  .row.win{color:var(--acc)} .row.win b{color:var(--acc);font-weight:600}
+  .strike b{text-decoration:line-through;text-decoration-color:var(--dim);color:var(--mut)}
 
-  /* versus */
-  .vs{display:grid;grid-template-columns:1fr 1fr;gap:26px}
-  .col{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:32px 30px;
-    display:flex;flex-direction:column;gap:18px}
-  .col.win{border-color:var(--accent)}
-  .col h3{font-family:var(--display);font-size:38px;font-weight:600;letter-spacing:-.02em}
-  .col.win h3{color:var(--accent)}
-  .col ul{list-style:none;display:flex;flex-direction:column;gap:13px;font-size:23px;color:var(--muted);line-height:1.35}
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .col{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:30px 28px;
+    display:flex;flex-direction:column;gap:16px}
+  .col.win{border-color:var(--acc);border-width:2px}
+  .col h3{font-family:"Fraunces",Georgia,serif;font-size:36px;font-weight:600;letter-spacing:-.02em}
+  .col.win h3{color:var(--acc)}
+  .col ul{list-style:none;display:flex;flex-direction:column;gap:12px;font-size:22px;color:var(--mut);line-height:1.35}
   .col .bad{color:var(--dim)}
 
-  /* bar chart */
-  .chart{display:flex;flex-direction:column;gap:22px}
-  .bar{display:grid;grid-template-columns:230px 1fr 100px;align-items:center;gap:20px;font-size:24px}
-  .bar .lab{color:var(--ink)}
-  .bar .track{height:34px}
-  .bar .fill{height:34px;background:var(--dim);border-radius:0 5px 5px 0}
-  .bar.win .fill{background:var(--accent)}
-  .bar.win .lab,.bar.win .val{color:var(--accent);font-weight:600}
-  .bar .val{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
-  .axisnote{font-size:18px;color:var(--dim);margin-top:6px}
+  .chart{display:flex;flex-direction:column;gap:20px}
+  .bar{display:grid;grid-template-columns:222px 1fr 96px;align-items:center;gap:18px;font-size:23px}
+  .bar .lab{color:var(--fg)}
+  .bar .track{height:32px;background:var(--track);border-radius:4px}
+  .bar .fill{height:32px;background:var(--dim);border-radius:4px}
+  .bar.win .fill{background:var(--acc)}
+  .bar.win .lab,.bar.win .val{color:var(--acc);font-weight:600}
+  .bar .val{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums}
 </style>
 
-<!-- 1 RECOMMENDATION -->
-<div class="card" id="c1">
-  <div class="tick"></div>
+<!-- 1 ACCENT · recommendation · cloud -->
+<div class="card t-accent" id="c1">
+  <div class="top"><div class="eyebrow">the short answer</div><div class="ico">
+    <svg viewBox="0 0 48 48"><path d="M14 36a8 8 0 0 1-.7-16A11 11 0 0 1 34 18.6 7.7 7.7 0 0 1 33.5 36z"/><path d="M24 33V21m0 0-5 5m5-5 5 5"/></svg>
+  </div></div>
   <div class="mid">
     <h1 class="xl">Need storage for your product?<br><em>Use Cloudflare R2.</em></h1>
     <p class="sub">10 GB free, 5 GB per file, downloads free.</p>
@@ -85,9 +85,11 @@
   <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
 </div>
 
-<!-- 2 THREE NUMBERS -->
-<div class="card" id="c2">
-  <div class="eyebrow">cloudflare r2, free tier</div>
+<!-- 2 INK · three numbers · layers -->
+<div class="card t-ink" id="c2">
+  <div class="top"><div class="eyebrow">cloudflare r2, free tier</div><div class="ico">
+    <svg viewBox="0 0 48 48"><path d="M24 7 6 16l18 9 18-9z"/><path d="M6 24l18 9 18-9"/><path d="M6 32l18 9 18-9"/></svg>
+  </div></div>
   <div class="mid">
     <div class="tiles">
       <div class="tile"><span class="n">10 GB</span><span class="l">free storage</span></div>
@@ -99,9 +101,11 @@
   <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
 </div>
 
-<!-- 3 THE WALL -->
-<div class="card" id="c3">
-  <div class="eyebrow">where this started</div>
+<!-- 3 PAPER · the wall · blocked file -->
+<div class="card t-paper" id="c3">
+  <div class="top"><div class="eyebrow">where this started</div><div class="ico">
+    <svg viewBox="0 0 48 48"><path d="M27 5H13a3 3 0 0 0-3 3v32a3 3 0 0 0 3 3h13"/><path d="M27 5l10 10v6"/><path d="M27 5v10h10"/><circle cx="34" cy="34" r="9"/><path d="M28 40l12-12"/></svg>
+  </div></div>
   <div class="mid">
     <h1 class="xl">My upload failed at <em>50 MB.</em></h1>
     <p class="sub">The video was 118. Supabase caps a single file at 50, whatever plan you are on.</p>
@@ -109,9 +113,11 @@
   <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
 </div>
 
-<!-- 4 THESIS -->
-<div class="card" id="c4">
-  <div class="tick"></div>
+<!-- 4 SAGE · thesis · download arrow + coin -->
+<div class="card t-sage" id="c4">
+  <div class="top"><div class="eyebrow">the part that bills you</div><div class="ico">
+    <svg viewBox="0 0 48 48"><path d="M18 6v20m0 0-7-7m7 7 7-7"/><path d="M6 32v6a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-6"/><circle cx="35" cy="14" r="8"/><path d="M35 10v8m-2.5-6h4a1.7 1.7 0 0 1 0 3.4h-3a1.7 1.7 0 0 0 0 3.4h4"/></svg>
+  </div></div>
   <div class="mid">
     <h1 class="lg">Storage is cheap.<br><em>Downloads are what cost money.</em></h1>
     <p class="sub">Every free tier advertises the first number. The bill comes from the second.</p>
@@ -119,9 +125,11 @@
   <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
 </div>
 
-<!-- 5 FULL TABLE -->
-<div class="card" id="c5">
-  <div class="eyebrow">free object storage, compared</div>
+<!-- 5 PAPER · full table · grid -->
+<div class="card t-paper" id="c5">
+  <div class="top"><div class="eyebrow">free object storage, compared</div><div class="ico">
+    <svg viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="30" rx="3"/><path d="M6 19h36M6 29h36M19 19v20"/></svg>
+  </div></div>
   <div class="mid">
     <table>
       <tr><th>Provider</th><th>Free</th><th>Per file</th><th>Downloads</th></tr>
@@ -129,18 +137,20 @@
       <tr><td class="name">Backblaze B2</td><td>10 GB</td><td>5 GB</td><td>30 GB/mo</td></tr>
       <tr><td class="name">Oracle Cloud</td><td>20 GB</td><td>large</td><td>paid</td></tr>
       <tr><td class="name">Google Cloud</td><td>5 GB</td><td>large</td><td>US only</td></tr>
-      <tr class="out"><td class="name">AWS S3 / Azure</td><td>5 GB</td><td>large</td><td>trial only</td></tr>
-      <tr class="out"><td class="name">Cloudinary</td><td>25 GB</td><td>100 MB</td><td>free</td></tr>
-      <tr class="out"><td class="name">Supabase</td><td>1 GB</td><td>50 MB</td><td>free</td></tr>
+      <tr><td class="name">AWS S3 / Azure</td><td>5 GB</td><td>large</td><td>trial only</td></tr>
+      <tr><td class="name">Cloudinary</td><td>25 GB</td><td>100 MB</td><td>free</td></tr>
+      <tr><td class="name">Supabase</td><td>1 GB</td><td>50 MB</td><td>free</td></tr>
     </table>
     <p class="sub">The difference is in the last column.</p>
   </div>
   <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
 </div>
 
-<!-- 6 ELIMINATION -->
-<div class="card" id="c6">
-  <div class="eyebrow">how the list shrank</div>
+<!-- 6 INK · elimination · funnel -->
+<div class="card t-ink" id="c6">
+  <div class="top"><div class="eyebrow">how the list shrank</div><div class="ico">
+    <svg viewBox="0 0 48 48"><path d="M5 8h38L29 25v15l-10 5V25z"/></svg>
+  </div></div>
   <div class="mid">
     <div>
       <div class="grouplabel">out straight away</div>
@@ -163,54 +173,46 @@
   <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
 </div>
 
-<!-- 7 R2 vs B2 -->
-<div class="card" id="c7">
-  <div class="eyebrow">the actual race</div>
+<!-- 7 PAPER · versus · scales -->
+<div class="card t-paper" id="c7">
+  <div class="top"><div class="eyebrow">the actual race</div><div class="ico">
+    <svg viewBox="0 0 48 48"><path d="M24 7v34M10 13h28"/><path d="M14 13 7 28h14zM34 13l-7 15h14z"/><path d="M17 41h14"/></svg>
+  </div></div>
   <div class="mid">
     <div class="vs">
-      <div class="col win">
-        <h3>Cloudflare R2</h3>
-        <ul>
-          <li>10 GB free</li>
-          <li>5 GB per file</li>
-          <li>downloads free, no cap</li>
-          <li class="bad">card required</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h3>Backblaze B2</h3>
-        <ul>
-          <li>10 GB free</li>
-          <li>5 GB per file</li>
-          <li class="bad">downloads free to 30 GB/mo</li>
-          <li>no card required</li>
-        </ul>
-      </div>
+      <div class="col win"><h3>Cloudflare R2</h3>
+        <ul><li>10 GB free</li><li>5 GB per file</li><li>downloads free, no cap</li><li class="bad">card required</li></ul></div>
+      <div class="col"><h3>Backblaze B2</h3>
+        <ul><li>10 GB free</li><li>5 GB per file</li><li class="bad">downloads free to 30 GB/mo</li><li>no card required</li></ul></div>
     </div>
     <p class="sub">Identical until the download line. That line is the decision.</p>
   </div>
   <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
 </div>
 
-<!-- 8 BAR CHART -->
-<div class="card" id="c8">
-  <div class="eyebrow">free storage, providers that accept a 118 MB file</div>
+<!-- 8 SAGE · chart · bars -->
+<div class="card t-sage" id="c8">
+  <div class="top"><div class="eyebrow">free storage, providers that accept a 118 MB file</div><div class="ico">
+    <svg viewBox="0 0 48 48"><path d="M7 41V27m10 14V13m10 28V21m10 20V7"/></svg>
+  </div></div>
   <div class="mid">
     <div class="chart">
-      <div class="bar"><span class="lab">Oracle Cloud</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="val">20 GB</span></div>
-      <div class="bar win"><span class="lab">Cloudflare R2</span><span class="track"><span class="fill" style="width:50%"></span></span><span class="val">10 GB</span></div>
-      <div class="bar"><span class="lab">Backblaze B2</span><span class="track"><span class="fill" style="width:50%"></span></span><span class="val">10 GB</span></div>
-      <div class="bar"><span class="lab">Google Cloud</span><span class="track"><span class="fill" style="width:25%"></span></span><span class="val">5 GB</span></div>
-      <div class="bar"><span class="lab">AWS / Azure</span><span class="track"><span class="fill" style="width:25%"></span></span><span class="val">5 GB</span></div>
+      <div class="bar"><span class="lab">Oracle Cloud</span><span class="track"><span class="fill" style="width:100%;display:block"></span></span><span class="val">20 GB</span></div>
+      <div class="bar win"><span class="lab">Cloudflare R2</span><span class="track"><span class="fill" style="width:50%;display:block"></span></span><span class="val">10 GB</span></div>
+      <div class="bar"><span class="lab">Backblaze B2</span><span class="track"><span class="fill" style="width:50%;display:block"></span></span><span class="val">10 GB</span></div>
+      <div class="bar"><span class="lab">Google Cloud</span><span class="track"><span class="fill" style="width:25%;display:block"></span></span><span class="val">5 GB</span></div>
+      <div class="bar"><span class="lab">AWS / Azure</span><span class="track"><span class="fill" style="width:25%;display:block"></span></span><span class="val">5 GB</span></div>
     </div>
     <p class="sub">Oracle gives the most space. I still picked R2.</p>
   </div>
   <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
 </div>
 
-<!-- 9 DECISION RULE -->
-<div class="card" id="c9">
-  <div class="eyebrow">the rule</div>
+<!-- 9 SAGE · the rule · checklist -->
+<div class="card t-sage" id="c9">
+  <div class="top"><div class="eyebrow">the rule</div><div class="ico">
+    <svg viewBox="0 0 48 48"><rect x="9" y="6" width="30" height="36" rx="3"/><path d="M16 17l3 3 6-6M16 30l3 3 6-6M30 18h4M30 31h4"/></svg>
+  </div></div>
   <div class="mid">
     <h1 class="md">If your product serves files to users, pick on <em>download cost</em>, not free space.</h1>
     <p class="sub">Storage you pay once. Downloads you pay every time someone opens the file.</p>
@@ -218,9 +220,11 @@
   <div class="foot"><span>harsh soni</span><span>free tiers, sept 2026</span></div>
 </div>
 
-<!-- 10 QUOTE -->
-<div class="card" id="c10">
-  <div class="tick"></div>
+<!-- 10 INK · quote · quote mark -->
+<div class="card t-ink" id="c10">
+  <div class="top"><div class="eyebrow">the call</div><div class="ico">
+    <svg viewBox="0 0 48 48"><path d="M19 12c-6 2-10 7-10 14v10h12V26h-7c0-5 2-8 6-9zM41 12c-6 2-10 7-10 14v10h12V26h-7c0-5 2-8 6-9z"/></svg>
+  </div></div>
   <div class="mid">
     <h1 class="lg">Oracle gives the most space.<br><em>I still picked R2.</em></h1>
   </div>
