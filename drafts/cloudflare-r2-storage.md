@@ -2,7 +2,7 @@
 
 **Goal:** gain relevant followers — share something useful, no pitch
 **From:** raw-material (log it: the 50 MB wall on a 118 MB video)
-**Hook family:** first person
+**Hook family:** advice, straight out
 **Humanizer:** LinkedIn mode, 8/10 -> 9/10, 4 fixes applied
 **Voice:** Harsh Soni profile applied
 **Status:** Drafted — one claim to confirm
@@ -11,35 +11,33 @@
 
 ## The post
 
-I compared every free storage tier I could find.
+If you are building a product and need extra storage, go with Cloudflare R2.
 
-Oracle gives the most free space. I didn't pick Oracle.
+10 GB free, 5 GB per file, downloads free.
 
-Here's what actually decided it.
+The last one is why.
 
-I needed somewhere to put 118 MB videos. Supabase caps a single file at 50 MB,
-so that was out on day one.
+I needed to store 118 MB videos. Supabase stops at 50 MB per file, so I went
+looking.
 
 What the free tiers give you:
 
-Cloudflare R2, 10 GB, 5 GB per file, downloads free, card needed
-Backblaze B2, 10 GB, 5 GB per file, free downloads to 30 GB a month, no card
-Oracle Cloud, 20 GB, harder setup, card needed
-Google Cloud, 5 GB, US regions only
-AWS S3 and Azure, 5 GB, free trial only, not free forever
-Cloudinary, about 25 GB, but a 100 MB file cap my videos fail
+Cloudflare R2, 10 GB, 5 GB per file, free downloads
+Backblaze B2, 10 GB, 5 GB per file, free downloads up to 30 GB a month
+Oracle, 20 GB, but harder to set up
+Google Cloud, 5 GB, US only
+AWS and Azure, 5 GB, trial only
+Cloudinary, 100 MB per file, too small for my videos
 
-I went with R2, and the storage size had nothing to do with it.
+Oracle gives the most space. I still picked R2.
 
-Storage is the cheap part. Egress is what turns a free tier into a bill, and R2
-charges nothing to serve files out. B2 is the close second and
-doesn't even ask for a card, but its free egress stops at 30 GB a month.
+Storage is cheap. Downloads are what cost money. R2 does not charge for them.
+That is the whole reason.
 
-If you are building anything that serves files to users, that one line is the
-whole decision.
+B2 is very close and does not even need a card. But its free downloads stop at
+30 GB a month.
 
-Numbers are from their free tiers this week. Check the pricing page before you
-commit, these move.
+Check the pricing pages before you sign up. These change.
 
 ---
 
@@ -106,23 +104,25 @@ recognizable AI construction in `reference/ai-tells.md`. Written instead as
 
 ## Humanizer pass
 
-LinkedIn mode, voice-profile.md + reference/ai-tells.md. Score 8/10 -> 9/10.
+LinkedIn mode, voice-profile.md + reference/ai-tells.md. 9/10.
 
-Four fixes:
+Simplified from the earlier 217-word version to 168. Changes:
 
-| Was | Tell | Now |
-|---|---|---|
-| "I compared 7 storage providers" | invented count. The source table has 7 rows, but one row is "AWS S3 / Azure", which is two services. The number is not defensible in the comments. | "every free storage tier I could find" |
-| "what actually decided it" + "what the free tiers actually give you" | #7, "actually" is AI vocabulary and it appeared twice in a short post | second one cut |
-| "Cloudinary, 25 GB" | #38 in reverse. The source says "about 25 GB", so dropping the hedge overstated it | "about 25 GB" restored |
-| "charges nothing to serve files out, at any volume" | claim not in the source table, which only says "Free downloads" | "at any volume" cut |
+- "egress" replaced with "downloads", which is the word a normal person uses
+- the hook now states the recommendation instead of holding it back
+- every sentence shortened, no clause runs longer than a breath
 
-Checked and clean: no em dashes, no hashtags, no emoji, no exclamation points, no
-"It's not X, it's Y", no forced triads, no lesson ending, no parallel repetition.
-The provider list is a stack list, which the tells reference explicitly does not
-flag as a rule of three.
+Clean on: em dashes, hashtags, emoji, exclamation points, "It's not X, it's Y",
+forced triads, lesson endings, parallel repetition, vendor grammar. The provider
+list is a stack list, which the tells reference explicitly does not flag.
 
-## Check before it ships
+**One deliberate break from post-format.md.** The rule says don't answer the
+question before the "see more" cut. This hook gives the recommendation away on
+line 1 on purpose, because Harsh asked for it that way twice. It still holds a
+loop open: the post says *what* to use, and "The last one is why" keeps *why*
+behind the cut. That is what the reader opens it for.
+
+## Check before it ships## Check before it ships
 
 - [x] Every number came from the material I was given
 - [x] Opening doesn't give away the ending — line 2 names a result and
