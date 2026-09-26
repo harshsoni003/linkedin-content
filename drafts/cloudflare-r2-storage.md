@@ -11,6 +11,9 @@
 
 ## The post
 
+Bullet character is a literal `•`, not markdown. LinkedIn strips markdown, so
+`- item` pastes as a hyphen. A bullet character is plain text and survives.
+
 If you are building a product and need extra storage, go with Cloudflare R2.
 
 10 GB free, 5 GB per file, downloads free.
@@ -23,16 +26,16 @@ So I checked every free tier.
 
 Out straight away:
 
-Supabase, 50 MB per file
-Cloudinary, 100 MB per file
-AWS and Azure, trial only, not free forever
-Google Cloud, 5 GB and US regions only
+• Supabase, 50 MB per file
+• Cloudinary, 100 MB per file
+• AWS and Azure, trial only, not free forever
+• Google Cloud, 5 GB and US regions only
 
 That left three:
 
-Oracle, 20 GB free, harder to set up, card needed
-Backblaze B2, 10 GB free, 5 GB per file, no card
-Cloudflare R2, 10 GB free, 5 GB per file, card needed
+• Oracle, 20 GB free, harder to set up, card needed
+• Backblaze B2, 10 GB free, 5 GB per file, no card
+• Cloudflare R2, 10 GB free, 5 GB per file, card needed
 
 Oracle gives the most space. I still picked R2.
 
