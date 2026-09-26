@@ -15,6 +15,7 @@ Four statuses. Nothing skips a step.
 |---|---|---|---|---|---|
 | 1 | "I stopped opening Photoshop for YouTube thumbnails." | none | Drafted | no | - |
 | 2 | "Every SaaS platform I tried to build last year failed." | tips in comments | Dated | yes | 2026-09-12 19:00 IST |
+| 3 | "My upload failed at 50 MB." | none | Drafted | no | - |
 
 ## Watch for
 
