@@ -45,6 +45,12 @@ See `../reference/ai-tells.md` for what it hunts.
 - **Reads first:** the whole `twitter/` folder, every time, and queries `posts.json` for your actual topic
 - **Key rule:** never invents a number. If the 721-post export has no example of what you're asking for, it says so instead of guessing
 
+To use it in the Claude app as well (not just Claude Code on this repo), run
+`bash .claude/skills/x-writer/pack.sh` and upload the `dist/x-writer.zip` it
+builds. That bundles the style guide, top posts, replies and the export inside
+the skill, so it still has its evidence with no repo around it. Re-run it after
+`python twitter/build.py` or the uploaded copy keeps serving the old numbers.
+
 ---
 
 ### humanizer
