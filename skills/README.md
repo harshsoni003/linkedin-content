@@ -36,6 +36,23 @@ See `../reference/ai-tells.md` for what it hunts.
 
 ---
 
+### x-writer
+**Use for anything going to X.** Posts, replies, quote tweets, bio edits, one-liners.
+
+- **Lives in:** [`.claude/skills/x-writer/SKILL.md`](../.claude/skills/x-writer/SKILL.md), inside this repo
+- **Give it:** what actually happened, plus any real numbers you have
+- **Get back:** 3 options with the post type named, 3 alternate first lines, the character count, and the data behind the pick
+- **Reads first:** the whole `twitter/` folder, every time, and queries `posts.json` for your actual topic
+- **Key rule:** never invents a number. If the 721-post export has no example of what you're asking for, it says so instead of guessing
+
+To use it in the Claude app as well (not just Claude Code on this repo), run
+`bash .claude/skills/x-writer/pack.sh` and upload the `dist/x-writer.zip` it
+builds. That bundles the style guide, top posts, replies and the export inside
+the skill, so it still has its evidence with no repo around it. Re-run it after
+`python twitter/build.py` or the uploaded copy keeps serving the old numbers.
+
+---
+
 ### humanizer
 **Run on any draft that sounds like AI wrote it.** Type `/humanizer` and paste the post, or give it a file path.
 
